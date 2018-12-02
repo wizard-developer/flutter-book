@@ -29,7 +29,7 @@ class _SliderScreenState extends State<SliderScreen> {
         description:
             "Developers at Google and elsewhere use Dart to create high-quality, mission-critical apps for iOS, Android, and the web. With features aimed at client-side development, Dart is a great fit for both mobile and web apps.",
         pathImage: "assets/images/dart.png",
-        backgroundColor: Color(0xff203152),
+        backgroundColor: Color(0xff1ca9da),
       ),
     );
     slides.add(
@@ -54,7 +54,13 @@ class _SliderScreenState extends State<SliderScreen> {
   }
 
   void onSkipPress() {
-
+    Navigator.of(context).pushAndRemoveUntil(
+      new MaterialPageRoute(
+        builder: (context) => MyHomePage(
+          title: '开始用qq登陆吧'
+        )
+      )
+      , (route) => route == null);
   }
 
   @override
